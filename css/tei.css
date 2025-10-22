@@ -1,0 +1,76 @@
+body {
+font-family: "Emilys Candy", serif;
+}
+
+tei-teiheader { font-family: "Emilys Candy", serif;
+    display: block;
+font-style: italic;
+font-size: x-large;}
+
+tei-tite {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+font-style: italic;
+text-align: center;
+font-size: x-large;
+}
+tei-author {
+    display: block;
+color:greenyellow;
+}
+
+tei-l {
+display: block;
+}
+
+tei-sp[lang="eng"] {
+display: block;
+}
+
+tei-castlist {
+display: block;
+margin: 2em auto;
+width: 60%;
+padding-left: 1em;
+border-left: 4px solid #444;
+font-family: "Emilys Candy", serif;
+}
+
+tei-role {
+display:block;
+font-weight: bold;
+font-size: 1.2em;
+color:darkred
+}
+
+tei-castitem {
+display: block;
+margin-bottom: 1.2em;
+}
+
+tei-roledesc {
+display:block;
+font-style: italic;
+color:blue;
+}
+
+tei-stage {
+display:block;
+font-variant: small-caps;
+font-style: italic;
+color:blueviolet
+}
+
+tei-stage [lang="eng"] {
+color: black;
+}
+
+tei-stage [lang="spa"] {
+color:green;
+}
+
+tei-speaker {
+display: block;
+font-variant: small-caps;
+color: orange
+}
