@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/nivaca/hamleodd/refs/heads/main/tei_sp.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/nivaca/hamleodd/refs/heads/main/tei_sp.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Hamlet</title>
+        <author>William Shakespeare</author>
+      </titleStmt>
+      <publicationStmt>
+        <p>Texto codificado por Juan Manuel Serrano Roa
+          para el curso de Herramientas digitales para humanistas
+          2025-20
+        </p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Texto tomado del 
+          <title> Second quarto de Shakespeare </title> (<date> 1604 </date>)
+          de William Shakespeare
+          en la siguiente dirección:
+          <ref> target="https://internetshakespeare.uvic.ca/doc/Ham_Q2/scene/3.3/index.html" </ref>
+        </p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text> 
+    <front>
+      <div type="DramatisPersonae">
+        <head>The Persons Represented</head>
+        <castList>
+          <castItem xml:id="hamlet">
+            <role>Hamlet</role>
+            <roleDesc>Prince of Denmark</roleDesc>
+          </castItem>
+          <castItem xml:id="ghost">
+            <role>Ghost</role>
+            <roleDesc>of Hamlet’s father, the late King Hamlet of Denmark</roleDesc>
+          </castItem>
+          <castItem xml:id="claudius">
+            <role>King Claudius </role>
+            <roleDesc>of Denmark, brother of the late King</roleDesc>
+          </castItem>
+          <castItem xml:id="gertrude">
+            <role>Queen Gertrude</role>
+            <roleDesc>Hamlet’s mother and his father’s widow, now married to King Claudius</roleDesc>
+          </castItem>
+          <castItem xml:id="polonius">
+            <role>Polonius</role>
+            <roleDesc>King Claudius' councillor </roleDesc>
+          </castItem>
+          <castItem xml:id="laertes">
+            <role>Laertes</role>
+            <roleDesc>Polonius' son</roleDesc>
+          </castItem>
+          <castItem xml:id="ophelia">
+            <role>Ophelia</role>
+            <roleDesc>Polonius' daughter</roleDesc>
+          </castItem>
+          <castItem xml:id="reynaldo">
+            <role>Reynaldo</role>
+            <roleDesc>Polonius' man</roleDesc>
+          </castItem>
+          <castItem xml:id="followers">
+            <role>Followers</role>
+            <roleDesc>of Laertes</roleDesc>
+          </castItem>
+          <castItem xml:id="horatio">
+            <role>Horatio</role>
+            <roleDesc>Hamlet's friend and fellow student</roleDesc>
+          </castItem>
+          <castItem xml:id="rosencrantz">
+            <role>Rosencrantz</role>
+            <roleDesc>fellow student</roleDesc>
+          </castItem>
+          <castItem xml:id="guildenstern">
+            <role>Guildenstern</role>
+            <roleDesc>fellow student</roleDesc>
+          </castItem>
+          <castItem xml:id="voltemand">
+            <role>Voltemand</role>
+            <roleDesc>Danish ambassador to Norway</roleDesc>
+          </castItem>
+          <castItem xml:id="cornelius">
+            <role>Cornelius</role>
+            <roleDesc>Danish ambassador to Norway</roleDesc>
+          </castItem>
+          <castItem xml:id="barnardo">
+            <role>Barnardo</role>
+            <roleDesc>sentinel</roleDesc>
+          </castItem>
+          <castItem xml:id="francisco">
+            <role>Francisco</role>
+            <roleDesc>sentinel</roleDesc>
+          </castItem>
+          <castItem xml:id="marcelus">
+            <role>Marcelus</role>
+            <roleDesc>sentinel</roleDesc>
+          </castItem>
+          <castItem xml:id="osric">
+            <role>Osric</role>
+            <roleDesc>a courtier</roleDesc>
+          </castItem>
+          <castGroup xml:id="players">
+            <roleDesc>Players</roleDesc>
+            <castItem xml:id="prologue">
+              <role>Prologue</role>
+            </castItem>
+            <castItem xml:id="playerking">
+              <role>Player King</role>
+            </castItem>
+            <castItem xml:id="playerqueen">
+              <role>Player Queen</role>
+            </castItem>
+            <castItem xml:id="lucianus">
+              <role>Lucianus</role>
+            </castItem>
+          </castGroup>
+          <castItem xml:id="gravedigger">
+            <role>Gravedigger</role>
+            <roleDesc>a clown</roleDesc>
+          </castItem>
+          <castItem xml:id="secondman">
+            <role>Second man</role>
+            <roleDesc>another clown</roleDesc>
+          </castItem>
+          <castItem xml:id="priest">
+            <role>Priest</role>
+          </castItem>
+          <castItem xml:id="lords">
+            <role>Lords</role>
+          </castItem>
+          <castItem xml:id="gentlemen">
+            <role>Gentlemen</role>
+          </castItem>
+          <castItem xml:id="messengers">
+            <role>Messengers</role>
+          </castItem>
+          <castItem xml:id="sailors">
+            <role>Sailors</role>
+          </castItem>
+          <castItem xml:id="fortinbras">
+            <role>Fortinbras</role>
+            <roleDesc>Prince of Norway</roleDesc>
+          </castItem>
+          <castItem xml:id="capitan">
+            <role>Capitan</role>
+            <roleDesc>in Norwegian army</roleDesc>
+          </castItem>
+          <castItem xml:id="ambassadors">
+            <role>Ambassadors</role>
+            <roleDesc>from England</roleDesc>
+          </castItem>
+          <castItem xml:id="attendants">
+            <role>Attendants</role>
+          </castItem>
+          <castItem xml:id="courtiers">
+            <role>Courtiers</role>
+          </castItem>
+          <castItem xml:id="trumpets">
+            <role>Trumpets</role>
+          </castItem>
+          <castItem xml:id="kettledrums">
+            <role>Kettledrums</role>
+          </castItem>
+          <castItem xml:id="drums">
+            <role>Drums</role>
+          </castItem>
+          <castItem xml:id="officers">
+            <role>Officers</role>
+          </castItem>
+          <castItem xml:id="norw_soldiers">
+            <role>Norwegian soldiers</role>
+          </castItem>
+        </castList>
+      </div>
+    </front>
+    <body>
+         <div n="3" type="acto">
+         <div n="3" type="escena">
+
+<p><stage xml:lang="eng" xml:id="ckfthfvivm_eng" corresp="#ckfthfvivm_spa"> 
+    Enter King, 
+    <app>
+    <lem>Rosencrantz,</lem>
+    <rdg wit="#F1">Rosincrance</rdg>
+    </app> 
+    and 
+    <app>
+    <lem>Guildenstern.</lem>
+    <rdg wit="#F1">Guildensterne</rdg>
+    </app>
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="ckfthfvivm_spa" corresp="#ckfthfvivm_eng"> 
+    Entran el rey, Rosencrantz y Guildenstern.
+</stage></p>
+
+<sp who="#kingclaudius" xml:lang="eng" xml:id="f0td0z3x8k_eng" corresp="#f0td0z3x8k_spa">
+    <speaker >King Claudius</speaker>
+    <p><l>I like him not, nor stands it safe with us</l>
+    <l>To let his madness range. Therefore prepare you.</l>
+    <l>I your commission will forthwith dispatch,</l>
+    <l>And he to England shall along with you.
+    <app>
+    <lem n="you."/>
+    <rdg wit="#F1" type="variation_present">;</rdg>
+    </app></l>
+    <l>The terms of our estate
+    <app>
+    <lem n="estate"/>  
+    <rdg wit="#F1" type="variation_present">,</rdg>
+    </app>
+    may not endure</l>
+    <l>Hazard so 
+      <app>
+      <lem>near's"</lem>
+      <rdg wit="#F1" type="variation_substance">dangerous</rdg>
+      </app>
+      as doth hourly grow</l>
+    <l>Out of his 
+      <app>
+      <lem>brows."</lem>
+      <rdg wit="#F1" type="variation_substance">Lunacies.</rdg>
+      </app>
+    </l></p>
+</sp>
+
+<sp who="#kingclaudius" xml:lang="spa" xml:id="f0td0z3x8k_spa" corresp="#f0td0z3x8k_eng">
+    <speaker>Rey Claudio</speaker>
+    <p><l>Él no me agrada, y no es seguro para nosotros</l>
+    <l>Permitir que su locura se desmande. Así que preparense.</l>
+    <l>Una orden he de darles inmediatamente,</l>
+    <l>Y a Inglaterra deberá ir con ustedes.</l>
+    <l>Las circunstancias de nuestro reino no pueden soportar</l>
+    <l>Un riesgo tan cercano como el que crece a cada hora</l>
+    <l>Fuera de su mente.</l></p>
+</sp>
+
+<sp who="#guildenstern" xml:lang="eng" xml:id="jgckghv3rg_eng" corresp="#jgckghv3rg_spa">
+    <speaker>
+    <app>
+    <lem>Guildenstern"</lem>
+    <rdg wit="#F1" type="variation_substance">Guild</rdg>
+    </app>  
+    </speaker>
+    <p><l>We will ourselves provide.</l>
+    <l>Most holy and religious fear it is</l>
+    <l>To keep those many many bodies safe</l>
+    <l><app>
+    <lem>That live and feed upon your majesty.</lem>
+    <rdg wit="#F1" type="variation_subatance">That liue and feede vpon your Maiestie.</rdg>
+    </app>
+</l></p>
+</sp>
+
+<sp who="#guildenstern" xml:lang="spa" xml:id="jgckghv3rg_spa" corresp="#jgckghv3rg_eng">
+    <speaker>Guildenstern</speaker>
+    <p><l>Nosotros nos encargaremos.</l>
+    <l>El miedo más santo y religioso es aquel</l>
+    <l>Que mantiene a salvo los numerosos cuerpos</l>
+    <l>Que viven y se alimentan sobre su majestad.</l></p>
+</sp>
+
+<sp who="#rosencrantz" xml:lang="eng" xml:id="qx9mn6fj2w_eng" corresp="#qx9mn6fj2w_spa">
+    <speaker>
+    <app>
+    <lem>Rosencrantz</lem>
+    <rdg wit="#F1" type="variation_substance">Rosin</rdg>
+    </app>
+    </speaker>
+    <p><l>
+    <app>
+    <lem>The single and peculiar life is bound</lem>
+    <rdg wit="F1" type="variation_inversion">The single/And peculiar life is bound</rdg>
+    </app></l>
+    <l>With all the strength and armor of the mind
+       <app>
+    <lem n="mind"/>
+    <rdg wit="#F1" type="variation_present">,</rdg>
+    </app></l>
+    <l>To keep 
+        <app>
+        <lem>itself</lem> 
+        <rdg wit="#F1" type="variation_substance">it selfe</rdg>
+        </app>
+        from noyance,
+          <app>
+    <lem n="noyance"/>
+    <rdg wit="#F1" type="variation_present">;</rdg>
+    </app>
+        but much more
+    <app>
+        <lem n="more"/>
+    <rdg wit="#F1" type="variation_present">,</rdg>
+    </app></l>
+    <l>That spirit upon whose weal depends and rests</l>
+    <app>
+        <lem n="spirit"/>
+        <rdg wit="#F1" type="variation_present">,</rdg> 
+        </app>
+    <l>The lives of many. The cess of majesty</l>
+    <l>Dies not alone, but like a gulf doth draw</l>
+    <l>What's near it with it, 
+    <app> 
+    <lem n="near it"/>
+    <rdg wit="#F1" type="variation_present">,</rdg> 
+    </app>
+    or it is a 
+    <app>
+    <lem>massy</lem>
+    <rdg wit="#F1" type="variation_orthography">maſſie, maſsie</rdg>
+    </app>
+    wheel</l>
+    <l>Fixed on the 
+    <app>
+    <lem>summit</lem>
+    <rdg wit="#F1" type="variation_substance">sommet</rdg>
+    </app>
+    of the highest mount,</l>
+    <l>To whose 
+    <app>
+    <lem>huge</lem> 
+    <rdg wit="#F1" type="variation_substance">hough</rdg>
+    </app>
+    spokes ten thousand lesser things</l>
+    <l>Are 
+    <app>
+    <lem>mortised</lem>
+    <rdg wit="#F1" type="variation_substance">mortiz'd</rdg>
+    </app>
+    and
+    <app> 
+    <lem>adjoined,</lem>
+     <rdg wit="#F1" type="variation_substance">adioyn'd</rdg>
+    </app>
+    which, when it falls,</l>
+    <l>Each small annexment, petty consequence,</l>
+    <l>Attends the boist'rous ruin. Never alone</l>
+    <l>Did the king sigh, but [with] a general groan.</l></p>
+</sp>
+
+<sp who="#rosencrantz" xml:lang="spa" xml:id="qx9mn6fj2w_spa" corresp="#qx9mn6fj2w_eng">
+ <speaker>rosencrantz</speaker>
+    <p><l>La vida única y peculiar está ligada</l>
+    <l>Con toda la fuerza  y defensa de la mente</l>
+    <l>Para anteponerse al daño, más lo está</l>
+    <l>Aquel espíritu sobre el que descansa el dependiente bienestar</l>
+    <l>De muchas vidas. La ausencia de majestad</l>
+    <l>No muere sola, es como un golfo que arrastra</l>
+    <l>Lo que está cerca con él, o es como una rueda masiva</l>
+    <l>Colocada en la cima del monte más alto,</l>
+    <l>Cuyos grandes radios sujetan diez mil cosas </l>
+    <l>Encajadas y unidas, que, cuando cae,</l>
+    <l>Cada pequeño anexo, cada consecuencia,</l>
+    <l>Caen la estruendosa ruina. Jamás el rey</l>
+    <l>Suspiró solo, sino con un pequeño gruñido.</l></p>
+</sp>
+
+<sp who="#kingclaudius" xml:lang="eng" xml:id="khlwmuq17d_eng" corresp="#khlwmuq17d_spa">
+    <speaker>King Claudius</speaker>
+    <p><l>Arm you, I pray you 
+    <app>
+    <lem n=","/>
+    <rdg wit="#F1" type="variation_absent">,</rdg> 
+    </app>
+    to this speedy 
+    <app>
+    <lem>voyage</lem>
+    <rdg wit="#Q2(2)" type="variation_orthography">viage</rdg>
+    </app>
+    ,</l>
+    <l>For we will fetters put about this fear</l>
+    <l>Which now goes too free-footed.</l></p>
+</sp>
+
+<sp who="#kingclaudius" xml:lang="spa" xml:id="khlwmuq17d_spa" corresp="#khlwmuq17d_eng">
+     <speaker>Rey Claudio</speaker>
+    <p><l>Prepárense, se los pido, para este viaje apresurado,</l>
+    <l>Para rodear de cadenas este miedo</l>
+    <l>Que ahora anda a paso libre.</l></p>
+</sp>
+
+<sp who="#rosencrantz" xml:lang="eng" xml:id="bxgv1s6xug_eng" corresp="#bxgv1s6xug_spa">
+    <speaker>
+    <app>
+    <lem>Rosencrantz</lem>
+    <rdg wit="$F1" type="variation_substance">Rosin</rdg>
+    </app>
+    </speaker>
+    <p><l>We will haste us.</l></p>
+</sp>
+
+<sp who="#rosencrantz" xml:lang="spa" xml:id="bxgv1s6xug_spa" corresp="#bxgv1s6xug_eng">
+    <speaker>Rosencrantz</speaker>
+    <p><l>Nos apresuraremos.</l></p>
+</sp>
+
+<p><stage xml:lang="eng" xml:id="vdrhu591vi_eng" corresp="#vdrhu591vi_spa">
+    Exeunt 
+    <app>
+    <lem>gentlemen</lem>
+    <rdg wit="$F1" type="variation_substance">Gent</rdg>
+    </app>
+    [Rosencrantz and Guildenstern].
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="vdrhu591vi_spa" corresp="#vdrhu591vi_eng">
+    Salen los caballeros [Rosencrantz y Guildenstern].
+</stage></p>
+
+<p><stage xml:lang="eng" xml:id="qt9yu25cfu_eng" corresp="#qt9yu25cfu_spa">
+    Enter Polonius.
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="qt9yu25cfu_spa" corresp="#qt9yu25cfu_eng">
+    Entra Polonio.
+</stage></p>
+
+<sp who="#polonius" xml:lang="eng" xml:id="jix50yt4jd_eng" corresp="#jix50yt4jd_spa">
+    <speaker>
+    <app>
+    <lem>Polonius</lem>
+    <rdg wit="#F1" type="variation_substance">Pol</rdg>
+    </app>
+    </speaker>
+    <p><l>My lord, he's going to his mother's closet.</l>
+    <l>
+      <app>
+      <lem>Behind</lem>
+      <rdg wit="#F1" type="variation_substance">behinde</rdg>
+      </app>
+      the arras I'll convey myself</l>
+    <l>To hear the process. I'll warrant 
+    <app>
+    <lem>she'll tax</lem> 
+    <rdg wit="#Q2(2)" type="variation_orthography">shee'letax</rdg> 
+    </app>
+    him home.</l>
+    <l>And, as you said, and wisely was it said,</l>
+    <l>'Tis meet that some more audience than a mother,</l>
+    <l>Since nature makes them partial, should 
+      <app>
+      <lem>o'erhea</lem>
+    <rdg wit= "#F1" type="variation_orthography">o're-heare</rdg>
+      </app>
+  </l>
+    <l>The speech of vantage. Fare you well, my 
+    <app>
+    <lem>liege.</lem>
+    <rdg wit="#Q2(2)" type="variation_substance">leige</rdg>
+    </app>
+    </l>
+    <l>I'll call upon you ere you go to bed,</l>
+    <l>And tell you what I know.</l></p>
+</sp>
+
+<sp who="#polonius" xml:lang="spa" xml:id="jix50yt4jd_spa" corresp="#jix50yt4jd_eng">
+    <speaker>Polonio</speaker>
+    <p><l>Mi señor, se dirige al aposento de su madre.</l>
+    <l>Detrás del tapiz me ocultaré</l>
+    <l>Para escuchar el suceso. Le garantizo que ella lo agravará.</l>
+    <l>Y, como usted dijo, y sabiamente fue dicho,</l>
+    <l>será necesaria más audiencia que una madre,</l>
+    <l>Pues ella será naturalmente parcial, se deberá escuchar</l>
+    <l>Para ventaja del discurso. Mis mejores deseos, mi señor. </l>
+    <l>Lo llamaré antes de que vaya a la cama</l>
+    <l>Y le diré lo que sepa.</l></p>
+</sp>
+
+<p><stage xml:lang="eng" xml:id="qwxj3wuf8q_eng" corresp="#qwxj3wuf8q_spa">
+  <app>
+  <lem>Exit [Polonius].</lem>
+  <rdg wit="#F1" type="variation_absent">Exit [Polonius]</rdg>
+  </app>
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="qwxj3wuf8q_spa" corresp="#qwxj3wuf8q_eng">
+    Sale [Polonio].
+</stage></p>
+
+<sp who="#kingclaudius" xml:lang="eng" xml:id="q111nobrc6_eng" corresp="#q111nobrc6_spa">
+    <speaker>King Claudius</speaker>
+    <p><l>Thanks, dear my lord.</l>
+    <l>Oh, my offense is rank! It smells to heaven.</l>
+    <l>It hath the primal eldest curse upon't,</l>
+    <l>A brother's 
+      <app>
+      <lem>murder</lem>
+      <rdg wit="#F1, #Q2" type="variation_orthography">murther</rdg>
+      </app>
+      . Pray can I not,</l>
+    <l>Though inclination be as sharp as will
+    <app>
+    <lem>;</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_orthography">:, ,</rdg>
+    </app>
+</l>
+    <l>My stronger guilt 
+    <app>
+    <lem n="stronger guilt"/>
+    <rdg wit="#F1" type="variation_present">,</rdg>
+    </app>
+    defeats my strong intent,</l>
+    <l>And like a man to double 
+    <app>
+    <lem>business </lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">businesse, bussines</rdg>
+    </app>
+    bound,</l>
+    <l>I stand in pause where I shall first begin,</l>
+    <l>And both neglect
+    <app>
+    <lem>.</lem>
+    <rdg wit="#F1" type="variation_orthography">;</rdg>
+    </app> 
+    What if this cursèd hand</l>
+    <l>Were thicker than itself with brother's blood,</l>
+    <l>Is there not rain enough in the sweet heavens</l>
+    <l>To wash it white as 
+    <app>
+    <lem>snow?</lem>
+    <rdg wit= "Q2(2)" type="variation_substance">snowe,</rdg>
+    </app> 
+    Whereto serves mercy</l>
+    <l>But to confront the visage of offense?</l>
+    <l>And what's in prayer
+    <app>
+    <lem n="in prayer"/>
+    <rdg wit="#F1" type="variation_present">,</rdg>
+    </app>    
+    but this twofold force,</l>
+    <l>To be forestallèd ere we come to fall,</l>
+    <l>Or 
+    <app>    
+    <lem>pardon[ed]</lem> 
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">pardon'd, pardon</rdg>
+    </app>
+    being down
+    <app>
+    <lem>?</lem>
+    <rdg wit="#Q2(2)" type="variation_orthography">,</rdg>
+    </app> 
+    Then I'll look up.</l>
+    <l>My fault is past
+    <app>
+    <lem>.</lem> 
+     <rdg wit="#Q2(2)" type="variation_orthography">,</rdg>
+    </app>
+    But, oh, what form of prayer</l>
+    <l>Can serve my turn
+    <app>
+    <lem>?</lem>
+    <rdg wit="#Q2(2)" type="variation_orthography">,</rdg>
+    </app>
+    <app>
+    <lem>"Forgive me my foul murder"?</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_absent">"?"</rdg>
+    </app>
+    </l>
+    <l>
+    <app>
+    <lem>That cannot be</lem>
+    <rdg wit="#Q2(2)" type="variation_present">That cannot be fine</rdg>
+    </app>
+    , 
+    <app>
+    <lem>since</lem>
+    <rdg wit= "#Q2(2)" type="variation_absent">since</rdg>
+    </app>
+     I am still possessed</l>
+    <l>Of those effects for which I did the murder
+    <app>
+    <lem>:</lem>
+    <rdg wit="#F1" type="variation_orthography">.</rdg>
+    </app>
+    </l>
+    <l>My crown, mine own ambition, and my queen.</l>
+    <l>May one be 
+      <app>
+      <lem>pardoned</lem>
+      <rdg wit="#F1, #Q2(2)" type="variation_substance">pardon'd</rdg> 
+      </app>
+      and retain th'offense?</l>
+    <l>In the corrupted 
+      <app>
+      <lem>currents</lem> 
+      <rdg wit="#F1" type="variation_substanace">currants</rdg>
+      </app>
+    of this world,</l>
+    <l>Offense's gilded hand may 
+    <app>
+    <lem>shove</lem>
+    <rdg wit="#Q2(2)" type="variation_substance">showe</rdg>
+    </app>
+     by justice,</l>
+    <l>And oft 'tis seen the wicked prize 
+    <app>  
+    <lem>itself</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">it selfe</rdg>
+    </app></l>
+    <l>
+    <app>  
+    <lem>Buys</lem> 
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">Buyes</rdg>
+    </app>
+    out the law. But 'tis not so 
+    <app>
+    <lem>above</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">aboue</rdg>
+    </app>
+    :</l>
+    <l>There is no shuffling, there the action 
+    <app>
+    <lem>lies</lem>
+    <rdg wit="#F1" type="variation_substance">lyes</rdg>
+    </app>
+    </l>
+    <l>In his true nature, and we 
+    <app>  
+    <lem>ourselves</lem> 
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">our ſelues</rdg>
+    </app>
+    <app>
+    <lem>compelled</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">compell'd, compeld</rdg>
+    </app>
+    ,</l>
+    <l>Even to the teeth and forehead of our faults
+    <app>
+    <lem>,</lem>
+    <rdg wit="#Q2(2)" type="variation_absent">,</rdg>
+    </app>
+  </l>
+    <l><app>
+    <lem>To give in evidence. What then? What rests?</lem>
+    <rdg wit="#Q2(2)" type="variation_substance">To giue in euidence, what then, what reſts,</rdg>
+    </app>
+  </l>
+    <l>
+    <app>
+    <lem>Try what repentance can. What can it not?</lem>
+    <rdg wit="#Q2(2)" type="variation_substance">Try what repentance can, what can it not,</rdg>
+    </app>  
+    </l>
+    <l>Yet what can it, when one cannot repent?</l>
+    <l>O wretched state
+    <app>
+    <lem>,</lem>
+    <rdg wit="#F1" type="variation_orthography">!</rdg>
+    </app>
+      O bosom 
+    <app>
+    <lem>black</lem> 
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">blacke</rdg>
+    </app>
+    as death,</l>
+    <l>O limèd soul, that, struggling to be free,</l>
+    <l>Art more 
+    <app>
+    <lem>engaged!</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">ingang'd:, inganged;</rdg>
+    </app>
+    Help, angels! Make assay
+    <app>
+    <lem>.</lem>
+     <rdg wit="#F1, #Q2(2)" type="variation_substance">:, ,</rdg>
+    </app>
+    </l>
+    <l>Bow
+    <app>
+    <lem>,</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_absent">,</rdg>
+    </app>
+    stubborn knees, and 
+    <app>
+    <lem>heart</lem>
+    <rdg wit="#Q2(2)" type="variation_absent">hart</rdg>
+    </app>
+    with strings of 
+    <app>
+    <lem>steel</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_substance">Steele, ſteale</rdg>
+    </app>
+    ,</l>
+    <l>Be soft as sinews of the newborn babe
+    <app>
+    <lem>!</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_orthography">,</rdg> 
+  </app>
+  </l>
+    <l>All may be well.</l></p>
+</sp>
+
+<sp who="#kingclaudius" xml:lang="spa" xml:id="q111nobrc6_spa" corresp="#q111nobrc6_eng">
+    <speaker>Rey Claudio</speaker>
+    <p><l>Gracias, mi querido señor.</l>
+    <l>¡Oh, mi culpa es repugnante! Huele al paraíso.</l>
+    <l>Tiene la principal maldición vieja encima,</l>
+    <l>El asesinato de un hermano. No puedo rezar,</l>
+    <l>Aunque mi inclinación a hacerlo es muy fuerte;</l>
+    <l>Mi culpa es más fuerte y vence mi gran voluntad,</l>
+    <l>Y como un hombre atado a dos tareas,</l>
+    <l>Me petrifica no saber por cuál comenzar,</l>
+    <l>Y así me niego a ambas. ¿Qué si esta mano maldita</l>
+    <l>Se engrosará con la sangre del hermano,</l>
+    <l>¿No hay lluvia capaz en los dulces cielos</l>
+    <l>Para dejarlas blancas como la nieve? ¿De qué sirve la piedad</l>
+    <l>Si no confronta la faz de la ofensa?</l>
+    <l>¿Y qué hay en la oración, sino esta doble fuerza,</l>
+    <l>Para prevenir a quienes caemos,</l>
+    <l>O perdonar estando abajo? Entonces miraré arriba.</l>
+    <l>Mi culpa está en el pasado. Pero, oh, ¿Qué forma de plegaria</l>
+    <l>Puede servir a mi situación? ¿"Perdona mi cruel asesinato"?</l>
+    <l>No puede ser, porque sigo poseyendo</l>
+    <l>Esos efectos por los que cometí el asesinato:</l>
+    <l>Mi corona, mi ambición y mi reina.</l>
+    <l>¿Podrá uno ser perdonado y retener los efectos de la ofensa?</l>
+    <l>En la actualidad corrupta de este mundo,</l>
+    <l>La mano usada en la ofensa puede cortarse por justicia,</l>
+    <l>Y a menudo es visto que solo un precio perverso</l>
+    <l>Puede comprar la ley. Pero no es así arriba;</l>
+    <l>Ahí no hay truco, la acción yace</l>
+    <l>En su naturaleza real, y nos vemos juzgados,</l>
+    <l>Incluso los dientes y la frente de nuestras culpas,</l>
+    <l>Para sacar evidencias. ¿Entonces? ¿Qué queda?</l>
+    <l>Probar lo que puede el arrepentimiento. ¿Qué no puede?</l>
+    <l>¿O qué puede, cuando uno no puede arrepentirse?</l>
+    <l>¡Oh, desdichado estado, oh, regazo oscuro como la muerte,</l>
+    <l>Oh, alma encalada, que, sufriendo por ser libre,</l>
+    <l>Se estremece más! ¡Ayúdenme, ángeles! Háganme la prueba.</l>
+    <l>¡Dóblense, rodillas necias, y corazón con hilos de acero,</l>
+    <l>Hazte suave como los tendones de un bebé recién nacido!</l>
+    <l>Todo va a estar bien.</l></p>
+</sp>
+
+<p><stage xml:lang="eng" xml:id="xs7cxvso96_eng" corresp="#xs7cxvso96_spa">
+  <app>
+  <lem>He kneels.</lem>
+  <rdg wit="#F1, #Q2(2)" type="variation_absent">He kneels.</rdg> 
+  </app>
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="xs7cxvso96_spa" corresp="#xs7cxvso96_eng">
+    Se arrodilla.
+</stage></p>
+
+<p><stage xml:lang="eng" xml:id="f082yyd9cz_eng" corresp="#f082yyd9cz_spa">
+    Enter Hamlet.
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="f082yyd9cz_spa" corresp="#f082yyd9cz_eng">
+    Entra Hamlet.
+</stage></p>
+
+<sp who="#hamlet" xml:lang="eng" xml:id="qyqrtu6lwu_eng" corresp="#qyqrtu6lwu_spa">
+    <speaker>
+    <app>
+    <lem>Hamlet</lem>
+    <rdg wit="#F1, #Q2(2)" type="variation_orthography">Ham</rdg> 
+    </app>
+  </speaker>
+    <p><l>
+    <app>
+    <lem>Now might I do it. But now 'a is a-praying,</lem>
+    <rdg wit="#F1" type="variation_substance">Now might I do it pat, now he is praying,</rdg> 
+    </app>  
+    </l>
+    <l>And now I'll do't.</l></p>
+ </sp>
+
+<sp who="#hamlet" xml:lang="spa" xml:id="qyqrtu6lwu_spa" corresp="#qyqrtu6lwu_eng">
+    <speaker>Hamlet</speaker>
+    <p><l>Ahora podría hacerlo. Pero ahora que él está rezando,</l>
+    <l>Y ahora lo haré.</l></p>
+</sp>
+
+<p><stage xml:lang="eng" xml:id="crqpj0kyap_eng" corresp="#crqpj0kyap_spa">
+  <app>
+  <lem>He draws his sword.</lem>
+  <rdg wit="#F1, #Q2(2)" type="variation_absent">He draws his sowrd.</rdg> 
+  </app>
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="crqpj0kyap_spa" corresp="#crqpj0kyap_eng">
+  Desenfunda su espada.</stage></p>
+
+<sp who="#hamlet" xml:lang="eng" xml:id="n3uc91mi6u_eng" corresp="#n3uc91mi6u_spa">
+    <speaker>Hamlet</speaker>
+    <p><l>And so 
+      <app>
+      <lem>'a</lem>
+    <rdg wit="#F1" type="variation_substance">he</rdg> 
+      </app> 
+      goes to heaven,</l>
+    <l>And so am I 
+    <app>
+    <lem>revenge[d].</lem>
+    <rdg wit="#F1" type="variation_orthography">reueng'd:</rdg> 
+    </app>
+    That would be scanned:</l>
+    <l>A villain kills my father, and for that
+      <app>
+      <lem>,</lem>
+      <rdg wit="#F1" type="variation_absent">,</rdg> 
+      </app>
+    </l>
+    <l>I, his 
+      <app>
+      <lem>sole</lem>
+      <rdg wit="#F1" type="variation_orthography">ſoule</rdg> 
+      </app>
+      son, do this same villain send</l>
+    <l>To heaven.</l>
+    <l>
+      <app>
+      <lem>Why,</lem>
+      <rdg wit="#F1" type="variation_substance">Oh</rdg> 
+      </app>
+      <app>
+      <lem>this is base and silly, not revenge.</lem>
+      <rdg wit="#F1" type="variation_substance">this is hyre and Sallery, not revenge.</rdg> 
+      </app>
+    </l>
+    <l>
+      <app>
+      <lem>'A</lem> 
+      <rdg wit="#F1" type="variation_substance">He</rdg> 
+      </app>
+    took my father grossly 
+    <app>
+    <lem>grossly</lem>
+    <rdg wit="#F1" type="variation_present">groſſely,</rdg> 
+    </app>
+    full of bread,</l>
+    <l>With all his crimes broad blown, as 
+    <app>
+    <lem>flush</lem> 
+    <rdg wit="#F1" type="variation_substance">freſh</rdg> 
+    </app>
+      as May,</l>
+    <l>And how his audit stands, who knows
+    <app>
+    <lem>knows</lem>
+    <rdg wit="#F1" type="variation_present">knows,</rdg> 
+    </app>
+    save heaven?</l>
+    <l>But in our circumstance and course of thought</l>
+    <l>'Tis heavy with him
+      <app>
+      <lem>.</lem>
+      <rdg wit="#F1" type="variation_orthography">;</rdg> 
+      </app>
+       And am I then revenged</l>
+    <l>To take him in the purging of his soul,</l>
+    <l>When he is fit and seasoned for his passage?</l>
+    <l>No.</l></p>
+    </sp>
+
+ <sp who="#hamlet" xml:lang="spa" xml:id="n3uc91mi6u_spa" corresp="#n3uc91mi6u_eng">
+    <speaker>Hamlet</speaker> 
+    <p><l>Y entonces iría al cielo,</l>
+    <l>Y entonces soy vengado. Eso podría dudarse:</l>
+    <l>Un villano mata a mi padre, y por eso,</l>
+    <l>yo, su único hijo, mandaré a este villano</l>
+    <l>Al paraíso.</l>
+    <l>Eso sería cobrar y pagar, no venganza.</l>
+    <l>Se llevó a mi padre, rebosante de pecado,</l>
+    <l>Con todos sus crímenes amplios y extensos, tan fresco como Mayo,</l>
+    <l>Y con cómo está su situación, ¿Quién sabe cómo lo salvará el cielo?</l>
+    <l>Pero en nuestra circunstancia y pensamiento</l>
+    <l>Es difícil para él. ¿Y sería entonces yo vengado</l>
+    <l>Al acabar con él en el purgamiento de su alma,</l>
+    <l>Cuando está preparado para su pasaje?</l>
+    <l>No.</l></p>
+    </sp>
+
+<p><stage xml:lang="eng" xml:id="eyk59fkk4s_eng" corresp="#eyk59fkk4s_spa">
+  <app>
+  <lem>He sheathes his sword.</lem>
+  <rdg wit="#F1, #Q2(2)" type="variation_absent">He sheathes his sword.</rdg> 
+  </app>
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="eyk59fkk4s_spa" corresp="#eyk59fkk4s_eng">
+  Guarda su espada.
+</stage></p>
+
+<sp who="#hamlet" xml:lang="eng" xml:id="u35t45ls2g_eng" corresp="#u35t45ls2g_spa">
+<p><l>
+  <app>
+  <lem>Up,</lem>
+  <rdg wit="#F1" type="variation_absent">,</rdg> 
+  </app>
+  sword, and know thou a more horrid hent
+  <app>
+  <lem>.</lem>
+<rdg wit="#F1" type="variation_absent">.</rdg> 
+<rdg wit="#Q2(2)" type="variation_orthography">,</rdg> 
+  </app></l>
+<l>When he is drunk, asleep, or in his rage,</l>
+<l>Or in th'incestuous pleasure of his bed,</l>
+<l>At game 
+  <app>
+  <lem>a-swearing</lem>
+  <rdg wit="#F1" type="variation_substance">, ſwearing</rdg> 
+  </app>
+  , or about some act</l>
+<l>That has no relish of salvation in't,</l>
+<l>Then trip him
+  <app>
+  <lem>,</lem> 
+  <rdg wit="#Q2(2)" type="variation_absent">,</rdg> 
+  </app>
+  that his heels may kick at heaven,</l>
+<l>And that his soul may be as damned and black</l>
+<l>As hell, whereto it goes. My mother stays.</l>
+<l>This physic but prolongs thy sickly days.</l></p>
+</sp>
+
+<sp who="#hamlet" xml:lang="spa" xml:id="u35t45ls2g_spa" corresp="#u35t45ls2g_eng">
+<p><l>Detente, espada, y aguarda un enemigo más hórrido.</l>
+<l>Cuando esté ebrio, soñoliento, o iracundo,</l>
+<l>O en el incestuoso placer de su cama,</l>
+<l>En un juego de palabrotas, o algún acto</l>
+<l>Que no tenga remedio o salvación.</l>
+<l>Entonces lo derribas, que sus tacones pateen el cielo,</l>
+<l>Y que su alma sea condenada y oscurecida</l>
+<l>Como el infierno, donde irá a parar. Mi madre está quieta.</l>
+<l>Este remedio solo prolonga los días de enfermedad.</l></p>
+</sp>
+
+<p><stage xml:lang="eng" xml:id="mc217tlasv_eng" corresp="#mc217tlasv_spa">
+    Exit.
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="mc217tlasv_spa" corresp="#mc217tlasv_eng">
+    Sale.
+</stage></p>
+
+<sp who="#kingclaudius" xml:lang="eng" xml:id="qqyqz6v4pk_eng" corresp="#qqyqz6v4pk_spa">
+    <speaker>King Claudius</speaker>
+    <p><l>My words fly up, my thoughts remain below.</l>
+    <l>Words without thoughts 
+    <app>
+    <lem>thoughts</lem>
+    <rdg wit="#Q2(2)" type="variation_present">thoughts,</rdg> 
+    </app>
+    never to heaven go.</l></p>
+</sp>
+
+<sp who="#kingclaudius" xml:lang="spa" xml:id="qqyqz6v4pk_spa" corresp="#qqyqz6v4pk_eng">
+    <speaker>Rey Claudio</speaker>
+    <p><l>Mis palabras vuelan, mis pensamientos siguen abajo.</l>
+    <l>Las palabras sin pensamientos jamás irán al cielo.</l></p>
+</sp>
+
+<p><stage xml:lang="eng" xml:id="tl3fxnhyr3_eng" corresp="#tl3fxnhyr3_spa"
+    >Exit.
+</stage></p>
+
+<p><stage xml:lang="spa" xml:id="tl3fxnhyr3_spa" corresp="#tl3fxnhyr3_eng"
+    >Sale.
+</stage></p>
+
+         </div>
+         </div>
+    </body>
+  </text>
+</TEI>
