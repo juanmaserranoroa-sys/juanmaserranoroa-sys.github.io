@@ -1,0 +1,172 @@
+body {
+font-family: "Emilys Candy", serif;
+font-size: 20px;
+background-image: url(/img/Fondo\ 2.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+url(/img/Fondo\ 2.jpg);
+image-rendering: crisp-edges;
+image-rendering: pixelated;
+}
+
+tei-p {
+line-height: 2.0;
+margin-bottom: 15px;
+}
+
+tei-l {
+line-height: 2.0;
+margin-bottom: 15px;
+}
+
+tei-div[type="reflexion"] {
+line-height: 2.0;
+margin: 20px;
+}
+
+tei-teiheader { font-family: "Emilys Candy", serif;
+    display: block;
+font-style: italic;
+font-size: x-large;}
+
+tei-tite {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+font-style: italic;
+text-align: center;
+font-size: x-large;
+}
+tei-author {
+    display: block;
+color: red;
+}
+
+tei-l {
+display: block;
+}
+
+tei-sp[lang="eng"] {
+display: block;
+}
+
+tei-castlist {
+display: block;
+margin: 2em auto;
+width: 60%;
+padding-left: 1em;
+border-left: 25px solid #444;
+font-family: "Emilys Candy", serif;
+}
+
+tei-role {
+display:block;
+font-weight: bold;
+font-size: 1.2em;
+color:darkblue
+}
+
+tei-castitem {
+display: block;
+margin-bottom: 1.2em;
+}
+
+tei-castitem:nth-child(1) tei-role,
+tei-castitem:nth-child(2) tei-role, 
+tei-castitem:nth-child(3) tei-role,
+tei-castitem:nth-child(4) tei-role,
+tei-castitem:nth-child(5) tei-role,
+tei-castitem:nth-child(6) tei-role,
+tei-castitem:nth-child(7) tei-role,
+tei-castitem:nth-child(11) tei-role, 
+tei-castitem:nth-child(12) tei-role {
+color:black   
+}
+
+En la lista de roles aparecen en negro los personajes que morirán en la tragedia
+
+tei-roledesc {
+display:block;
+font-style: italic;
+}
+
+tei-stage {
+display:block;
+font-variant: small-caps;
+font-style: italic;
+font-weight: bold;
+}
+
+tei-stage [lang="eng"] {
+color: purple;
+font-size: 20px;
+}
+
+tei-speaker {
+font-weight: bold;
+display: inline;
+font-variant: small-caps;
+color: darkblue;
+font-size: 20px;
+}
+
+tei-lem {
+display: inline;
+color: #333;
+font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+tei-rdg {
+display: inline;
+color: #800000;
+font-family: "Dancing Script", serif;
+font-style: italic;
+font-size: 20px;
+}
+
+tei-rdg::before {
+content: "/";
+color: inherit;
+}
+
+tei-lem [n]::after {
+content:"Ø (" attr(wit) ")"
+}
+
+tei-lem::after {
+content: attr(wit) ")";
+vertical-align: sub;
+font-size: 20px;
+}
+
+tei-rdg::after {
+content: attr(wit) ")";
+vertical-align: sub;
+font-family: "Lucien Schoenschrift CAT", serif;
+font-size: 20px;
+} 
+
+tei-rdg [type="variaton_absent"]::after {
+content: "Ø";
+vertical-align: sub;
+font-size: 20px;
+}
+
+tei-rdg [type="variaton_present"]::before {
+content: "^";
+vertical-align: sub;
+font-size: 20px;
+}
+
+tei-note {
+display: inline;
+font-size:20px;
+font-style: italic;
+color:green
+}
+
+
+
